@@ -1,33 +1,33 @@
 ---
 title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
+description: 'Overview of Wander API usage modes and available endpoints'
 ---
-
-<Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
-</Note>
 
 ## Welcome
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+Wander's API provides two modes of event data interaction: **Direct Event Data Serving** and **Event Data Fetching and Storage**. Depending on your needs, you can either retrieve data in real-time without storing it or fetch and store data for later use.
 
-<Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
->
-  View the OpenAPI specification file
-</Card>
+### Direct Event Data Serving
 
-## Authentication
+In this mode, you retrieve event data on demand, without storing it. This is ideal for applications needing live event data.
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+#### Available Endpoints:
 
-```json
-"security": [
-  {
-    "bearerAuth": []
-  }
-]
-```
+- **Get events**: Retrieve events based on filters (e.g., location, date, type). Perfect for populating a live event feed or map.
+
+- **Get event**: Fetch detailed data for a specific event, useful for creating individual event pages.
+
+- **Get place**: Retrieve events for a particular venue, useful for showing events happening at specific locations.
+
+- **Get performer**: Fetch events related to a specific performer, useful for showing all events for an artist.
+
+- **Search**: Implement a search bar to find events, places, or performers.
+
+### Event Data Fetching and Storage
+
+This mode is suitable when you need to store event data for further use and keep it updated.
+
+#### Available Endpoint:
+
+- **Get events catalogue**: Retrieve all events and store them. You can also update existing data by specifying the date when the data was last fetched.
+

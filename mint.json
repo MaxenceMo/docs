@@ -37,11 +37,6 @@
       "name": "Back office",
       "icon": "book-open-cover",
       "url": "https://wander-app.fr/office"
-    },
-    {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://wander-app.fr"
     }
   ],
   "navigation": [
@@ -49,12 +44,6 @@
       "group": "Home",
       "pages": [
         "introduction"
-      ]
-    },
-    {
-      "group": "Get Started",
-      "pages": [
-        "quickstart"
       ]
     },
     {
