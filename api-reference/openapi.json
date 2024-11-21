@@ -20,11 +20,11 @@
       "description": "It requires a clientId & clientSecret or a refreshToken"
     },
     {
-      "name": "Direct Event Data Serving APIs",
+      "name": "Direct Event Data Serving",
       "description": "It requires a client's accessToken"
     },
     {
-      "name": "Event Data Fetching and Storage APIs",
+      "name": "Event Data Fetching and Storage",
       "description": "It requires a client's accessToken"
     }
   ],
@@ -35,7 +35,7 @@
           "Clients' login"
         ],
         "summary": "Login",
-        "description": "It generates a refreshToken valid for 7 days to relogin and an accessToken valid for 1 hour to use the next API routes.",
+        "description": "It generates a refreshToken valid for 7 days to relogin and an accessToken valid for 1 hour to use the next routes.",
         "requestBody": {
           "required": true,
           "content": {
@@ -135,7 +135,7 @@
     "/v2/get/events": {
       "post": {
         "tags": [
-          "Direct Event Data Serving APIs"
+          "Direct Event Data Serving"
         ],
         "summary": "Get events",
         "description": "Get events according to your filters. You can use it to serve a map or event stream.",
@@ -173,7 +173,8 @@
                         "solidarite",
                         "spectacle",
                         "sport",
-                        "visite"
+                        "visite",
+                        "none"
                       ],
                       "examples": [
                         "spectacle",
@@ -1004,7 +1005,7 @@
     "/v2/get/catalogue": {
       "post": {
         "tags": [
-          "Event Data Fetching and Storage APIs"
+          "Event Data Fetching and Storage"
         ],
         "summary": "Get events catalogue",
         "description": "Get and store all events. You can use it to keep your database up to date.",
@@ -1763,7 +1764,7 @@
     "/v2/event/{eventId}": {
       "get": {
         "tags": [
-          "Direct Event Data Serving APIs"
+          "Direct Event Data Serving"
         ],
         "summary": "Get event",
         "description": "Get event's whole informations. You can use it to create a page for the event.",
@@ -2802,7 +2803,7 @@
     "/v2/place/{placeId}": {
       "get": {
         "tags": [
-          "Direct Event Data Serving APIs"
+          "Direct Event Data Serving"
         ],
         "summary": "Get place",
         "description": "Get place's whole informations and events that will take place. You can use it to create a page for the place.",
@@ -3138,6 +3139,109 @@
                                 "examples": [
                                   "2024-09-12T12:00:06.138Z"
                                 ]
+                              },
+                              "place": {
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "integer",
+                                    "format": "int64",
+                                    "examples": [
+                                      10
+                                    ]
+                                  },
+                                  "name": {
+                                    "type": "string",
+                                    "examples": [
+                                      "Accor Arena"
+                                    ]
+                                  },
+                                  "address": {
+                                    "type": "object",
+                                    "properties": {
+                                      "lng": {
+                                        "type": "number",
+                                        "examples": [
+                                          2.123909
+                                        ]
+                                      },
+                                      "lat": {
+                                        "type": "number",
+                                        "examples": [
+                                          42.32981038
+                                        ]
+                                      },
+                                      "street": {
+                                        "type": [
+                                          "string",
+                                          "null"
+                                        ],
+                                        "examples": [
+                                          "Rue Saint-Jacques"
+                                        ]
+                                      },
+                                      "city": {
+                                        "type": [
+                                          "string",
+                                          "null"
+                                        ],
+                                        "examples": [
+                                          "Paris"
+                                        ]
+                                      },
+                                      "postalCode": {
+                                        "type": [
+                                          "string",
+                                          "null"
+                                        ],
+                                        "examples": [
+                                          75005
+                                        ]
+                                      },
+                                      "country": {
+                                        "type": [
+                                          "string",
+                                          "null"
+                                        ],
+                                        "examples": [
+                                          "France"
+                                        ]
+                                      }
+                                    }
+                                  },
+                                  "image": {
+                                    "type": [
+                                      "string",
+                                      "null"
+                                    ]
+                                  },
+                                  "squareImage": {
+                                    "type": [
+                                      "string",
+                                      "null"
+                                    ]
+                                  },
+                                  "rectangleImage": {
+                                    "type": [
+                                      "string",
+                                      "null"
+                                    ]
+                                  },
+                                  "averageGrade": {
+                                    "description": "This is the average grade for the place on Google.",
+                                    "type": [
+                                      "number",
+                                      "null"
+                                    ]
+                                  },
+                                  "totalGrades": {
+                                    "description": "This is the total number of grades for the place on Google.",
+                                    "type": [
+                                      "number",
+                                      "null"
+                                    ]
+                                  }
+                                }
                               },
                               "sources": {
                                 "type": "array",
@@ -4110,7 +4214,7 @@
     "/v2/performer/{performerId}": {
       "get": {
         "tags": [
-          "Direct Event Data Serving APIs"
+          "Direct Event Data Serving"
         ],
         "summary": "Get performer",
         "description": "Get performer's whole informations and the events in which they take part. You can use it to create a page for the performer.",
@@ -5241,7 +5345,7 @@
     "/v2/search": {
       "get": {
         "tags": [
-          "Direct Event Data Serving APIs"
+          "Direct Event Data Serving"
         ],
         "summary": "Search",
         "description": "Search for event or place or performer. You can use it for a searchbar.",
