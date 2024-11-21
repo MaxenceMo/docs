@@ -53,5 +53,9 @@
   "footerSocials": {
     "website": "https://wander-app.fr",
     "linkedin": "https://linkedin.com/company/wandrapp/"
+  },
+  "feedback": {
+    "thumbsRating": true,
+    "raiseIssue": true
   }
 }
