@@ -56,8 +56,6 @@
     "linkedin": "https://linkedin.com/company/wandrapp/"
   },
   "feedback": {
-    "thumbsRating": true,
-    "raiseIssue": true,
-    "suggestEdit": true
+    "thumbsRating": true
   }
 }
