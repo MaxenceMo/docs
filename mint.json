@@ -16,14 +16,10 @@
     }
   },
   "topbarLinks": [
-    {
-      "name": "Github",
-      "url": "contact@wander-app.fr"
-    }
   ],
   "topbarCtaButton": {
-    "name": "Support",
-    "url": "contact@wander-app.fr"
+    "name": "Contact support",
+    "url": "mailto:support-api@wander-app.fr"
   },
   "tabs": [
     {
