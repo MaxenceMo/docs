@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "Wander - API partners",
-    "description": "This API, developed by Wander, allows partner applications to access Wander's event data. Authentication, provided by the Wander team, is required to use this API. If you are interested in utilizing this API, please contact us at: support-api@wander-app.fr.\n\n**Last update: 2024-11-19**",
+    "description": "This API, developed by Wander, allows partner applications to access Wander's event data. Authentication, provided by the Wander team, is required to use this API. If you are interested in utilizing this API, please contact us at: support-api@wander-app.fr.\n\n**Last update: 2024-11-26**",
     "termsOfService": "https://wander-app.fr/api/terms-of-use",
     "contact": {
       "email": "support-api@wander-app.fr"
@@ -4234,7 +4234,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "description": "Performer object returned with '/v2/performer/{performerId}'",
+                  "description": "Performer object",
                   "type": "object",
                   "properties": {
                     "id": {
@@ -4781,7 +4781,7 @@
               },
               "application/xml": {
                 "schema": {
-                  "description": "Performer object returned with '/v2/performer/{performerId}'",
+                  "description": "Performer object",
                   "type": "object",
                   "properties": {
                     "id": {
@@ -6197,6 +6197,1151 @@
           }
         ]
       }
+    },
+    "/v2/search/performer": {
+      "get": {
+        "tags": [
+          "Direct Event Data Serving"
+        ],
+        "summary": "Search performer",
+        "description": "Search for a performer by name. A result is returned only if the performer's identity can be confidently confirmed.",
+        "parameters": [
+          {
+            "name": "input",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "description": "Performer object",
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer",
+                          "format": "int64",
+                          "examples": [
+                            300000
+                          ]
+                        },
+                        "name": {
+                          "type": "string",
+                          "examples": [
+                            "PLK"
+                          ]
+                        },
+                        "image": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "squareImage": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "rectangleImage": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "webImage": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "events": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "integer",
+                                "format": "int64",
+                                "examples": [
+                                  100000
+                                ]
+                              },
+                              "wanderId": {
+                                "type": "integer",
+                                "format": "int64",
+                                "examples": [
+                                  100000
+                                ]
+                              },
+                              "name": {
+                                "type": "string",
+                                "examples": [
+                                  "PLK en concert"
+                                ]
+                              },
+                              "startDate": {
+                                "type": "string",
+                                "examples": [
+                                  "2024-03-03 06:08:23.222 +0100"
+                                ]
+                              },
+                              "endDate": {
+                                "type": "string",
+                                "examples": [
+                                  "2024-03-04 06:08:23.222 +0100"
+                                ]
+                              },
+                              "hasEndDateNotReliable": {
+                                "type": "boolean"
+                              },
+                              "lowestPrice": {
+                                "type": [
+                                  "number",
+                                  "null"
+                                ],
+                                "description": "The lowest price for the event in euros. If it's null, we don't know the price.",
+                                "examples": [
+                                  0
+                                ]
+                              },
+                              "highestPrice": {
+                                "type": [
+                                  "number",
+                                  "null"
+                                ],
+                                "description": "The highest price for the event in euros. If it's null, we don't know the price.",
+                                "examples": [
+                                  200
+                                ]
+                              },
+                              "description": {
+                                "type": "string",
+                                "examples": [
+                                  "Un super concert de PLK à l'accor arena !"
+                                ]
+                              },
+                              "hasGoodDeal": {
+                                "description": "This attribute is a boolean which is set to ‘true’ when a good deal on the event is identified during integration (discount, early bird ticket, preferential rate, etc.). One of the sources has 'isGoodDeal' set to true.",
+                                "type": "boolean"
+                              },
+                              "image": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ]
+                              },
+                              "imageHeight": {
+                                "type": [
+                                  "number",
+                                  "null"
+                                ]
+                              },
+                              "imageWidth": {
+                                "type": [
+                                  "number",
+                                  "null"
+                                ]
+                              },
+                              "squareImage": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ]
+                              },
+                              "rectangleImage": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ]
+                              },
+                              "webImage": {
+                                "description": "This is the image compressed.",
+                                "type": [
+                                  "string",
+                                  "null"
+                                ]
+                              },
+                              "notAvailableAt": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "description": "This is the date on which the event became unavailable. Either because all the places have been sold or because there is no more availability.",
+                                "examples": [
+                                  "2024-09-12T12:00:06.138Z"
+                                ]
+                              },
+                              "cancelledAt": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "description": "This is the date on which the event was cancelled.",
+                                "examples": [
+                                  "2024-09-12T12:00:06.138Z"
+                                ]
+                              },
+                              "createdAt": {
+                                "type": "string",
+                                "examples": [
+                                  "2024-09-12T12:00:06.138Z"
+                                ]
+                              },
+                              "updatedAt": {
+                                "type": "string",
+                                "examples": [
+                                  "2024-09-12T12:00:06.138Z"
+                                ]
+                              },
+                              "place": {
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "integer",
+                                    "format": "int64",
+                                    "examples": [
+                                      10
+                                    ]
+                                  },
+                                  "name": {
+                                    "type": "string",
+                                    "examples": [
+                                      "Accor Arena"
+                                    ]
+                                  },
+                                  "address": {
+                                    "type": "object",
+                                    "properties": {
+                                      "lng": {
+                                        "type": "number",
+                                        "examples": [
+                                          2.123909
+                                        ]
+                                      },
+                                      "lat": {
+                                        "type": "number",
+                                        "examples": [
+                                          42.32981038
+                                        ]
+                                      },
+                                      "street": {
+                                        "type": [
+                                          "string",
+                                          "null"
+                                        ],
+                                        "examples": [
+                                          "Rue Saint-Jacques"
+                                        ]
+                                      },
+                                      "city": {
+                                        "type": [
+                                          "string",
+                                          "null"
+                                        ],
+                                        "examples": [
+                                          "Paris"
+                                        ]
+                                      },
+                                      "postalCode": {
+                                        "type": [
+                                          "string",
+                                          "null"
+                                        ],
+                                        "examples": [
+                                          75005
+                                        ]
+                                      },
+                                      "country": {
+                                        "type": [
+                                          "string",
+                                          "null"
+                                        ],
+                                        "examples": [
+                                          "France"
+                                        ]
+                                      }
+                                    }
+                                  },
+                                  "image": {
+                                    "type": [
+                                      "string",
+                                      "null"
+                                    ]
+                                  },
+                                  "squareImage": {
+                                    "type": [
+                                      "string",
+                                      "null"
+                                    ]
+                                  },
+                                  "rectangleImage": {
+                                    "type": [
+                                      "string",
+                                      "null"
+                                    ]
+                                  },
+                                  "averageGrade": {
+                                    "description": "This is the average grade for the place on Google.",
+                                    "type": [
+                                      "number",
+                                      "null"
+                                    ]
+                                  },
+                                  "totalGrades": {
+                                    "description": "This is the total number of grades for the place on Google.",
+                                    "type": [
+                                      "number",
+                                      "null"
+                                    ]
+                                  }
+                                }
+                              },
+                              "sources": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "description": "This is one of the sources of information about the event",
+                                  "properties": {
+                                    "id": {
+                                      "type": "integer",
+                                      "format": "int64",
+                                      "examples": [
+                                        45
+                                      ]
+                                    },
+                                    "partner": {
+                                      "type": "object",
+                                      "properties": {
+                                        "name": {
+                                          "type": "string",
+                                          "examples": [
+                                            "fnac"
+                                          ]
+                                        },
+                                        "logo": {
+                                          "type": "string"
+                                        },
+                                        "backColor": {
+                                          "type": "string"
+                                        }
+                                      }
+                                    },
+                                    "startDate": {
+                                      "type": "string"
+                                    },
+                                    "endDate": {
+                                      "type": "string"
+                                    },
+                                    "lowestPrice": {
+                                      "type": [
+                                        "number",
+                                        "null"
+                                      ],
+                                      "description": "The lowest price for the event in euros. If it's null, we don't know the price",
+                                      "examples": [
+                                        0
+                                      ]
+                                    },
+                                    "highestPrice": {
+                                      "type": [
+                                        "number",
+                                        "null"
+                                      ],
+                                      "description": "The highest price for the event in euros. If it's null, we don't know the price",
+                                      "examples": [
+                                        200
+                                      ]
+                                    },
+                                    "isGoodDeal": {
+                                      "description": "This attribute is a boolean which is set to ‘true’ when a good deal on this event source is identified during integration (discount, early bird ticket, preferential rate, etc.).",
+                                      "type": "boolean"
+                                    },
+                                    "commissionFix": {
+                                      "description": "The fixed commission in euros.",
+                                      "type": "number",
+                                      "examples": [
+                                        1
+                                      ]
+                                    },
+                                    "commissionRate": {
+                                      "type": "number",
+                                      "examples": [
+                                        0.05
+                                      ]
+                                    },
+                                    "link": {
+                                      "type": "string",
+                                      "description": "The affiliate link to buy tickets."
+                                    },
+                                    "isBookable": {
+                                      "type": "boolean"
+                                    },
+                                    "availableDates": {
+                                      "description": "This corresponds to all the dates available for this event and for this particular source.",
+                                      "type": "array",
+                                      "items": {
+                                        "type": "object",
+                                        "properties": {
+                                          "startDate": {
+                                            "type": "string"
+                                          },
+                                          "endDate": {
+                                            "type": "string"
+                                          },
+                                          "hasEndDateNotReliable": {
+                                            "type": "boolean"
+                                          },
+                                          "hasUnknownAvailability": {
+                                            "type": "boolean"
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "cantRetrieveAvailableDates": {
+                                      "description": "For some events, ‘availableDates’ is incomplete, and to indicate that information about the event's availability is missing, we set 'cantRetrieveAvailableDates' to true.",
+                                      "type": "boolean"
+                                    },
+                                    "notAvailableAt": {
+                                      "type": [
+                                        "string",
+                                        "null"
+                                      ],
+                                      "description": "This is the date on which the event became unavailable. Either because all the places have been sold or because there is no more availability."
+                                    }
+                                  }
+                                }
+                              },
+                              "categories": {
+                                "description": "It's an array of all the categories of the event. Some of these objects are ‘sub-categories’ and others are 'main categories'. For a main category, 'subCategory' is null, while for a sub-category, ‘subCategory’ is not null and ‘mainCategory’ has the same value as the main category.",
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "number",
+                                      "format": "int64",
+                                      "examples": [
+                                        1
+                                      ]
+                                    },
+                                    "mainCategory": {
+                                      "type": "string",
+                                      "examples": [
+                                        "expo"
+                                      ]
+                                    },
+                                    "subCategory": {
+                                      "description": "If it's null, it's a main category, otherwise it's a sub-category of the main category.",
+                                      "type": [
+                                        "string",
+                                        "null"
+                                      ],
+                                      "examples": [
+                                        "painting"
+                                      ]
+                                    },
+                                    "traductionFR": {
+                                      "type": "string",
+                                      "examples": [
+                                        "peinture"
+                                      ]
+                                    },
+                                    "traductionEN": {
+                                      "type": "string",
+                                      "examples": [
+                                        "painting"
+                                      ]
+                                    },
+                                    "icon": {
+                                      "type": "string"
+                                    }
+                                  }
+                                }
+                              },
+                              "commentaries": {
+                                "description": "During integration, we retrieve all the comments/grades made about the event.",
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "grade": {
+                                      "type": "number",
+                                      "examples": [
+                                        5
+                                      ]
+                                    },
+                                    "content": {
+                                      "type": [
+                                        "string",
+                                        "null"
+                                      ],
+                                      "examples": [
+                                        "Amazing concert !"
+                                      ]
+                                    },
+                                    "username": {
+                                      "type": "string",
+                                      "examples": [
+                                        "Wander bot"
+                                      ]
+                                    },
+                                    "date": {
+                                      "type": "string"
+                                    }
+                                  }
+                                }
+                              },
+                              "averageGrade": {
+                                "description": "During integration, we also retrieve all the comments/grades made about the event. ‘AverageGrade’ is simply the average of these ratings.",
+                                "type": [
+                                  "number",
+                                  "null"
+                                ],
+                                "examples": [
+                                  5
+                                ]
+                              },
+                              "totalGrades": {
+                                "description": "During integration, we also retrieve all the comments/grades made about the event. 'totalGrades' is simply the number of these ratings.",
+                                "type": "number",
+                                "examples": [
+                                  1
+                                ]
+                              },
+                              "trendingScore": {
+                                "type": "number",
+                                "examples": [
+                                  10
+                                ]
+                              },
+                              "performers": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "integer",
+                                      "format": "int64",
+                                      "examples": [
+                                        45
+                                      ]
+                                    },
+                                    "name": {
+                                      "type": "string",
+                                      "examples": [
+                                        "PLK"
+                                      ]
+                                    },
+                                    "description": {
+                                      "type": [
+                                        "string",
+                                        "null"
+                                      ]
+                                    },
+                                    "image": {
+                                      "type": [
+                                        "string",
+                                        "null"
+                                      ]
+                                    },
+                                    "webImage": {
+                                      "type": [
+                                        "string",
+                                        "null"
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "description": "Performer object",
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer",
+                          "format": "int64",
+                          "examples": [
+                            300000
+                          ]
+                        },
+                        "name": {
+                          "type": "string",
+                          "examples": [
+                            "PLK"
+                          ]
+                        },
+                        "image": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "squareImage": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "rectangleImage": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "webImage": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "events": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "integer",
+                                "format": "int64",
+                                "examples": [
+                                  100000
+                                ]
+                              },
+                              "wanderId": {
+                                "type": "integer",
+                                "format": "int64",
+                                "examples": [
+                                  100000
+                                ]
+                              },
+                              "name": {
+                                "type": "string",
+                                "examples": [
+                                  "PLK en concert"
+                                ]
+                              },
+                              "startDate": {
+                                "type": "string",
+                                "examples": [
+                                  "2024-03-03 06:08:23.222 +0100"
+                                ]
+                              },
+                              "endDate": {
+                                "type": "string",
+                                "examples": [
+                                  "2024-03-04 06:08:23.222 +0100"
+                                ]
+                              },
+                              "hasEndDateNotReliable": {
+                                "type": "boolean"
+                              },
+                              "lowestPrice": {
+                                "type": [
+                                  "number",
+                                  "null"
+                                ],
+                                "description": "The lowest price for the event in euros. If it's null, we don't know the price.",
+                                "examples": [
+                                  0
+                                ]
+                              },
+                              "highestPrice": {
+                                "type": [
+                                  "number",
+                                  "null"
+                                ],
+                                "description": "The highest price for the event in euros. If it's null, we don't know the price.",
+                                "examples": [
+                                  200
+                                ]
+                              },
+                              "description": {
+                                "type": "string",
+                                "examples": [
+                                  "Un super concert de PLK à l'accor arena !"
+                                ]
+                              },
+                              "hasGoodDeal": {
+                                "description": "This attribute is a boolean which is set to ‘true’ when a good deal on the event is identified during integration (discount, early bird ticket, preferential rate, etc.). One of the sources has 'isGoodDeal' set to true.",
+                                "type": "boolean"
+                              },
+                              "image": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ]
+                              },
+                              "imageHeight": {
+                                "type": [
+                                  "number",
+                                  "null"
+                                ]
+                              },
+                              "imageWidth": {
+                                "type": [
+                                  "number",
+                                  "null"
+                                ]
+                              },
+                              "squareImage": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ]
+                              },
+                              "rectangleImage": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ]
+                              },
+                              "webImage": {
+                                "description": "This is the image compressed.",
+                                "type": [
+                                  "string",
+                                  "null"
+                                ]
+                              },
+                              "notAvailableAt": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "description": "This is the date on which the event became unavailable. Either because all the places have been sold or because there is no more availability.",
+                                "examples": [
+                                  "2024-09-12T12:00:06.138Z"
+                                ]
+                              },
+                              "cancelledAt": {
+                                "type": [
+                                  "string",
+                                  "null"
+                                ],
+                                "description": "This is the date on which the event was cancelled.",
+                                "examples": [
+                                  "2024-09-12T12:00:06.138Z"
+                                ]
+                              },
+                              "createdAt": {
+                                "type": "string",
+                                "examples": [
+                                  "2024-09-12T12:00:06.138Z"
+                                ]
+                              },
+                              "updatedAt": {
+                                "type": "string",
+                                "examples": [
+                                  "2024-09-12T12:00:06.138Z"
+                                ]
+                              },
+                              "place": {
+                                "type": "object",
+                                "properties": {
+                                  "id": {
+                                    "type": "integer",
+                                    "format": "int64",
+                                    "examples": [
+                                      10
+                                    ]
+                                  },
+                                  "name": {
+                                    "type": "string",
+                                    "examples": [
+                                      "Accor Arena"
+                                    ]
+                                  },
+                                  "address": {
+                                    "type": "object",
+                                    "properties": {
+                                      "lng": {
+                                        "type": "number",
+                                        "examples": [
+                                          2.123909
+                                        ]
+                                      },
+                                      "lat": {
+                                        "type": "number",
+                                        "examples": [
+                                          42.32981038
+                                        ]
+                                      },
+                                      "street": {
+                                        "type": [
+                                          "string",
+                                          "null"
+                                        ],
+                                        "examples": [
+                                          "Rue Saint-Jacques"
+                                        ]
+                                      },
+                                      "city": {
+                                        "type": [
+                                          "string",
+                                          "null"
+                                        ],
+                                        "examples": [
+                                          "Paris"
+                                        ]
+                                      },
+                                      "postalCode": {
+                                        "type": [
+                                          "string",
+                                          "null"
+                                        ],
+                                        "examples": [
+                                          75005
+                                        ]
+                                      },
+                                      "country": {
+                                        "type": [
+                                          "string",
+                                          "null"
+                                        ],
+                                        "examples": [
+                                          "France"
+                                        ]
+                                      }
+                                    }
+                                  },
+                                  "image": {
+                                    "type": [
+                                      "string",
+                                      "null"
+                                    ]
+                                  },
+                                  "squareImage": {
+                                    "type": [
+                                      "string",
+                                      "null"
+                                    ]
+                                  },
+                                  "rectangleImage": {
+                                    "type": [
+                                      "string",
+                                      "null"
+                                    ]
+                                  },
+                                  "averageGrade": {
+                                    "description": "This is the average grade for the place on Google.",
+                                    "type": [
+                                      "number",
+                                      "null"
+                                    ]
+                                  },
+                                  "totalGrades": {
+                                    "description": "This is the total number of grades for the place on Google.",
+                                    "type": [
+                                      "number",
+                                      "null"
+                                    ]
+                                  }
+                                }
+                              },
+                              "sources": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "description": "This is one of the sources of information about the event",
+                                  "properties": {
+                                    "id": {
+                                      "type": "integer",
+                                      "format": "int64",
+                                      "examples": [
+                                        45
+                                      ]
+                                    },
+                                    "partner": {
+                                      "type": "object",
+                                      "properties": {
+                                        "name": {
+                                          "type": "string",
+                                          "examples": [
+                                            "fnac"
+                                          ]
+                                        },
+                                        "logo": {
+                                          "type": "string"
+                                        },
+                                        "backColor": {
+                                          "type": "string"
+                                        }
+                                      }
+                                    },
+                                    "startDate": {
+                                      "type": "string"
+                                    },
+                                    "endDate": {
+                                      "type": "string"
+                                    },
+                                    "lowestPrice": {
+                                      "type": [
+                                        "number",
+                                        "null"
+                                      ],
+                                      "description": "The lowest price for the event in euros. If it's null, we don't know the price",
+                                      "examples": [
+                                        0
+                                      ]
+                                    },
+                                    "highestPrice": {
+                                      "type": [
+                                        "number",
+                                        "null"
+                                      ],
+                                      "description": "The highest price for the event in euros. If it's null, we don't know the price",
+                                      "examples": [
+                                        200
+                                      ]
+                                    },
+                                    "isGoodDeal": {
+                                      "description": "This attribute is a boolean which is set to ‘true’ when a good deal on this event source is identified during integration (discount, early bird ticket, preferential rate, etc.).",
+                                      "type": "boolean"
+                                    },
+                                    "commissionFix": {
+                                      "description": "The fixed commission in euros.",
+                                      "type": "number",
+                                      "examples": [
+                                        1
+                                      ]
+                                    },
+                                    "commissionRate": {
+                                      "type": "number",
+                                      "examples": [
+                                        0.05
+                                      ]
+                                    },
+                                    "link": {
+                                      "type": "string",
+                                      "description": "The affiliate link to buy tickets."
+                                    },
+                                    "isBookable": {
+                                      "type": "boolean"
+                                    },
+                                    "availableDates": {
+                                      "description": "This corresponds to all the dates available for this event and for this particular source.",
+                                      "type": "array",
+                                      "items": {
+                                        "type": "object",
+                                        "properties": {
+                                          "startDate": {
+                                            "type": "string"
+                                          },
+                                          "endDate": {
+                                            "type": "string"
+                                          },
+                                          "hasEndDateNotReliable": {
+                                            "type": "boolean"
+                                          },
+                                          "hasUnknownAvailability": {
+                                            "type": "boolean"
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "cantRetrieveAvailableDates": {
+                                      "description": "For some events, ‘availableDates’ is incomplete, and to indicate that information about the event's availability is missing, we set 'cantRetrieveAvailableDates' to true.",
+                                      "type": "boolean"
+                                    },
+                                    "notAvailableAt": {
+                                      "type": [
+                                        "string",
+                                        "null"
+                                      ],
+                                      "description": "This is the date on which the event became unavailable. Either because all the places have been sold or because there is no more availability."
+                                    }
+                                  }
+                                }
+                              },
+                              "categories": {
+                                "description": "It's an array of all the categories of the event. Some of these objects are ‘sub-categories’ and others are 'main categories'. For a main category, 'subCategory' is null, while for a sub-category, ‘subCategory’ is not null and ‘mainCategory’ has the same value as the main category.",
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "number",
+                                      "format": "int64",
+                                      "examples": [
+                                        1
+                                      ]
+                                    },
+                                    "mainCategory": {
+                                      "type": "string",
+                                      "examples": [
+                                        "expo"
+                                      ]
+                                    },
+                                    "subCategory": {
+                                      "description": "If it's null, it's a main category, otherwise it's a sub-category of the main category.",
+                                      "type": [
+                                        "string",
+                                        "null"
+                                      ],
+                                      "examples": [
+                                        "painting"
+                                      ]
+                                    },
+                                    "traductionFR": {
+                                      "type": "string",
+                                      "examples": [
+                                        "peinture"
+                                      ]
+                                    },
+                                    "traductionEN": {
+                                      "type": "string",
+                                      "examples": [
+                                        "painting"
+                                      ]
+                                    },
+                                    "icon": {
+                                      "type": "string"
+                                    }
+                                  }
+                                }
+                              },
+                              "commentaries": {
+                                "description": "During integration, we retrieve all the comments/grades made about the event.",
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "grade": {
+                                      "type": "number",
+                                      "examples": [
+                                        5
+                                      ]
+                                    },
+                                    "content": {
+                                      "type": [
+                                        "string",
+                                        "null"
+                                      ],
+                                      "examples": [
+                                        "Amazing concert !"
+                                      ]
+                                    },
+                                    "username": {
+                                      "type": "string",
+                                      "examples": [
+                                        "Wander bot"
+                                      ]
+                                    },
+                                    "date": {
+                                      "type": "string"
+                                    }
+                                  }
+                                }
+                              },
+                              "averageGrade": {
+                                "description": "During integration, we also retrieve all the comments/grades made about the event. ‘AverageGrade’ is simply the average of these ratings.",
+                                "type": [
+                                  "number",
+                                  "null"
+                                ],
+                                "examples": [
+                                  5
+                                ]
+                              },
+                              "totalGrades": {
+                                "description": "During integration, we also retrieve all the comments/grades made about the event. 'totalGrades' is simply the number of these ratings.",
+                                "type": "number",
+                                "examples": [
+                                  1
+                                ]
+                              },
+                              "trendingScore": {
+                                "type": "number",
+                                "examples": [
+                                  10
+                                ]
+                              },
+                              "performers": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "integer",
+                                      "format": "int64",
+                                      "examples": [
+                                        45
+                                      ]
+                                    },
+                                    "name": {
+                                      "type": "string",
+                                      "examples": [
+                                        "PLK"
+                                      ]
+                                    },
+                                    "description": {
+                                      "type": [
+                                        "string",
+                                        "null"
+                                      ]
+                                    },
+                                    "image": {
+                                      "type": [
+                                        "string",
+                                        "null"
+                                      ]
+                                    },
+                                    "webImage": {
+                                      "type": [
+                                        "string",
+                                        "null"
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid query schema"
+          },
+          "401": {
+            "description": "Access token is missing or invalid"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
     }
   },
   "components": {
@@ -7391,7 +8536,7 @@
         }
       },
       "PerformerWithEventsV2": {
-        "description": "Performer object returned with '/v2/performer/{performerId}'",
+        "description": "Performer object",
         "type": "object",
         "properties": {
           "id": {
