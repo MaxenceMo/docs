@@ -655,6 +655,7 @@
                             }
                           },
                           "sources": {
+                            "descritpion": "It's all the informations and ticket sources for the event (ex. Fnac, Ticketmaster, BilletReduc, etc.)",
                             "type": "array",
                             "items": {
                               "type": "object",
@@ -754,6 +755,21 @@
                                       }
                                     }
                                   }
+                                },
+                                "averageGrade": {
+                                  "type": [
+                                    "number",
+                                    "null"
+                                  ],
+                                  "examples": [
+                                    5
+                                  ]
+                                },
+                                "totalGrades": {
+                                  "type": "number",
+                                  "examples": [
+                                    1
+                                  ]
                                 },
                                 "cantRetrieveAvailableDates": {
                                   "description": "For some events, ‘availableDates’ is incomplete, and to indicate that information about the event's availability is missing, we set 'cantRetrieveAvailableDates' to true.",
@@ -1384,6 +1400,7 @@
                                 }
                               },
                               "sources": {
+                                "descritpion": "It's all the informations and ticket sources for the event (ex. Fnac, Ticketmaster, BilletReduc, etc.)",
                                 "type": "array",
                                 "items": {
                                   "type": "object",
@@ -1483,6 +1500,21 @@
                                           }
                                         }
                                       }
+                                    },
+                                    "averageGrade": {
+                                      "type": [
+                                        "number",
+                                        "null"
+                                      ],
+                                      "examples": [
+                                        5
+                                      ]
+                                    },
+                                    "totalGrades": {
+                                      "type": "number",
+                                      "examples": [
+                                        1
+                                      ]
                                     },
                                     "cantRetrieveAvailableDates": {
                                       "description": "For some events, ‘availableDates’ is incomplete, and to indicate that information about the event's availability is missing, we set 'cantRetrieveAvailableDates' to true.",
@@ -2024,6 +2056,7 @@
                       }
                     },
                     "sources": {
+                      "descritpion": "It's all the informations and ticket sources for the event (ex. Fnac, Ticketmaster, BilletReduc, etc.)",
                       "type": "array",
                       "items": {
                         "type": "object",
@@ -2123,6 +2156,21 @@
                                 }
                               }
                             }
+                          },
+                          "averageGrade": {
+                            "type": [
+                              "number",
+                              "null"
+                            ],
+                            "examples": [
+                              5
+                            ]
+                          },
+                          "totalGrades": {
+                            "type": "number",
+                            "examples": [
+                              1
+                            ]
                           },
                           "cantRetrieveAvailableDates": {
                             "description": "For some events, ‘availableDates’ is incomplete, and to indicate that information about the event's availability is missing, we set 'cantRetrieveAvailableDates' to true.",
@@ -2525,6 +2573,7 @@
                       }
                     },
                     "sources": {
+                      "descritpion": "It's all the informations and ticket sources for the event (ex. Fnac, Ticketmaster, BilletReduc, etc.)",
                       "type": "array",
                       "items": {
                         "type": "object",
@@ -2624,6 +2673,21 @@
                                 }
                               }
                             }
+                          },
+                          "averageGrade": {
+                            "type": [
+                              "number",
+                              "null"
+                            ],
+                            "examples": [
+                              5
+                            ]
+                          },
+                          "totalGrades": {
+                            "type": "number",
+                            "examples": [
+                              1
+                            ]
                           },
                           "cantRetrieveAvailableDates": {
                             "description": "For some events, ‘availableDates’ is incomplete, and to indicate that information about the event's availability is missing, we set 'cantRetrieveAvailableDates' to true.",
@@ -3244,6 +3308,7 @@
                                 }
                               },
                               "sources": {
+                                "descritpion": "It's all the informations and ticket sources for the event (ex. Fnac, Ticketmaster, BilletReduc, etc.)",
                                 "type": "array",
                                 "items": {
                                   "type": "object",
@@ -3343,6 +3408,21 @@
                                           }
                                         }
                                       }
+                                    },
+                                    "averageGrade": {
+                                      "type": [
+                                        "number",
+                                        "null"
+                                      ],
+                                      "examples": [
+                                        5
+                                      ]
+                                    },
+                                    "totalGrades": {
+                                      "type": "number",
+                                      "examples": [
+                                        1
+                                      ]
                                     },
                                     "cantRetrieveAvailableDates": {
                                       "description": "For some events, ‘availableDates’ is incomplete, and to indicate that information about the event's availability is missing, we set 'cantRetrieveAvailableDates' to true.",
@@ -3931,6 +4011,7 @@
                                 }
                               },
                               "sources": {
+                                "descritpion": "It's all the informations and ticket sources for the event (ex. Fnac, Ticketmaster, BilletReduc, etc.)",
                                 "type": "array",
                                 "items": {
                                   "type": "object",
@@ -4030,6 +4111,21 @@
                                           }
                                         }
                                       }
+                                    },
+                                    "averageGrade": {
+                                      "type": [
+                                        "number",
+                                        "null"
+                                      ],
+                                      "examples": [
+                                        5
+                                      ]
+                                    },
+                                    "totalGrades": {
+                                      "type": "number",
+                                      "examples": [
+                                        1
+                                      ]
                                     },
                                     "cantRetrieveAvailableDates": {
                                       "description": "For some events, ‘availableDates’ is incomplete, and to indicate that information about the event's availability is missing, we set 'cantRetrieveAvailableDates' to true.",
@@ -4517,6 +4613,7 @@
                             }
                           },
                           "sources": {
+                            "descritpion": "It's all the informations and ticket sources for the event (ex. Fnac, Ticketmaster, BilletReduc, etc.)",
                             "type": "array",
                             "items": {
                               "type": "object",
@@ -4616,6 +4713,21 @@
                                       }
                                     }
                                   }
+                                },
+                                "averageGrade": {
+                                  "type": [
+                                    "number",
+                                    "null"
+                                  ],
+                                  "examples": [
+                                    5
+                                  ]
+                                },
+                                "totalGrades": {
+                                  "type": "number",
+                                  "examples": [
+                                    1
+                                  ]
                                 },
                                 "cantRetrieveAvailableDates": {
                                   "description": "For some events, ‘availableDates’ is incomplete, and to indicate that information about the event's availability is missing, we set 'cantRetrieveAvailableDates' to true.",
@@ -5064,6 +5176,7 @@
                             }
                           },
                           "sources": {
+                            "descritpion": "It's all the informations and ticket sources for the event (ex. Fnac, Ticketmaster, BilletReduc, etc.)",
                             "type": "array",
                             "items": {
                               "type": "object",
@@ -5163,6 +5276,21 @@
                                       }
                                     }
                                   }
+                                },
+                                "averageGrade": {
+                                  "type": [
+                                    "number",
+                                    "null"
+                                  ],
+                                  "examples": [
+                                    5
+                                  ]
+                                },
+                                "totalGrades": {
+                                  "type": "number",
+                                  "examples": [
+                                    1
+                                  ]
                                 },
                                 "cantRetrieveAvailableDates": {
                                   "description": "For some events, ‘availableDates’ is incomplete, and to indicate that information about the event's availability is missing, we set 'cantRetrieveAvailableDates' to true.",
@@ -6506,6 +6634,7 @@
                                 }
                               },
                               "sources": {
+                                "descritpion": "It's all the informations and ticket sources for the event (ex. Fnac, Ticketmaster, BilletReduc, etc.)",
                                 "type": "array",
                                 "items": {
                                   "type": "object",
@@ -6605,6 +6734,21 @@
                                           }
                                         }
                                       }
+                                    },
+                                    "averageGrade": {
+                                      "type": [
+                                        "number",
+                                        "null"
+                                      ],
+                                      "examples": [
+                                        5
+                                      ]
+                                    },
+                                    "totalGrades": {
+                                      "type": "number",
+                                      "examples": [
+                                        1
+                                      ]
                                     },
                                     "cantRetrieveAvailableDates": {
                                       "description": "For some events, ‘availableDates’ is incomplete, and to indicate that information about the event's availability is missing, we set 'cantRetrieveAvailableDates' to true.",
@@ -7060,6 +7204,7 @@
                                 }
                               },
                               "sources": {
+                                "descritpion": "It's all the informations and ticket sources for the event (ex. Fnac, Ticketmaster, BilletReduc, etc.)",
                                 "type": "array",
                                 "items": {
                                   "type": "object",
@@ -7159,6 +7304,21 @@
                                           }
                                         }
                                       }
+                                    },
+                                    "averageGrade": {
+                                      "type": [
+                                        "number",
+                                        "null"
+                                      ],
+                                      "examples": [
+                                        5
+                                      ]
+                                    },
+                                    "totalGrades": {
+                                      "type": "number",
+                                      "examples": [
+                                        1
+                                      ]
                                     },
                                     "cantRetrieveAvailableDates": {
                                       "description": "For some events, ‘availableDates’ is incomplete, and to indicate that information about the event's availability is missing, we set 'cantRetrieveAvailableDates' to true.",
@@ -7592,6 +7752,7 @@
             }
           },
           "sources": {
+            "descritpion": "It's all the informations and ticket sources for the event (ex. Fnac, Ticketmaster, BilletReduc, etc.)",
             "type": "array",
             "items": {
               "type": "object",
@@ -7691,6 +7852,21 @@
                       }
                     }
                   }
+                },
+                "averageGrade": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "examples": [
+                    5
+                  ]
+                },
+                "totalGrades": {
+                  "type": "number",
+                  "examples": [
+                    1
+                  ]
                 },
                 "cantRetrieveAvailableDates": {
                   "description": "For some events, ‘availableDates’ is incomplete, and to indicate that information about the event's availability is missing, we set 'cantRetrieveAvailableDates' to true.",
@@ -8272,6 +8448,7 @@
                       }
                     },
                     "sources": {
+                      "descritpion": "It's all the informations and ticket sources for the event (ex. Fnac, Ticketmaster, BilletReduc, etc.)",
                       "type": "array",
                       "items": {
                         "type": "object",
@@ -8371,6 +8548,21 @@
                                 }
                               }
                             }
+                          },
+                          "averageGrade": {
+                            "type": [
+                              "number",
+                              "null"
+                            ],
+                            "examples": [
+                              5
+                            ]
+                          },
+                          "totalGrades": {
+                            "type": "number",
+                            "examples": [
+                              1
+                            ]
                           },
                           "cantRetrieveAvailableDates": {
                             "description": "For some events, ‘availableDates’ is incomplete, and to indicate that information about the event's availability is missing, we set 'cantRetrieveAvailableDates' to true.",
@@ -8819,6 +9011,7 @@
                   }
                 },
                 "sources": {
+                  "descritpion": "It's all the informations and ticket sources for the event (ex. Fnac, Ticketmaster, BilletReduc, etc.)",
                   "type": "array",
                   "items": {
                     "type": "object",
@@ -8918,6 +9111,21 @@
                             }
                           }
                         }
+                      },
+                      "averageGrade": {
+                        "type": [
+                          "number",
+                          "null"
+                        ],
+                        "examples": [
+                          5
+                        ]
+                      },
+                      "totalGrades": {
+                        "type": "number",
+                        "examples": [
+                          1
+                        ]
                       },
                       "cantRetrieveAvailableDates": {
                         "description": "For some events, ‘availableDates’ is incomplete, and to indicate that information about the event's availability is missing, we set 'cantRetrieveAvailableDates' to true.",
@@ -9608,6 +9816,21 @@
                 }
               }
             }
+          },
+          "averageGrade": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "examples": [
+              5
+            ]
+          },
+          "totalGrades": {
+            "type": "number",
+            "examples": [
+              1
+            ]
           },
           "cantRetrieveAvailableDates": {
             "description": "For some events, ‘availableDates’ is incomplete, and to indicate that information about the event's availability is missing, we set 'cantRetrieveAvailableDates' to true.",
