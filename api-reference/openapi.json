@@ -561,6 +561,13 @@
                                   10
                                 ]
                               },
+                              "googleId": {
+                                "type": "string",
+                                "description": "The unique identifier of the place in the Google Places API.",
+                                "examples": [
+                                  "ChIJ9dfFtXYmVQ0RXL6FkWtY8lA"
+                                ]
+                              },
                               "name": {
                                 "type": "string",
                                 "examples": [
@@ -1306,6 +1313,13 @@
                                       10
                                     ]
                                   },
+                                  "googleId": {
+                                    "type": "string",
+                                    "description": "The unique identifier of the place in the Google Places API.",
+                                    "examples": [
+                                      "ChIJ9dfFtXYmVQ0RXL6FkWtY8lA"
+                                    ]
+                                  },
                                   "name": {
                                     "type": "string",
                                     "examples": [
@@ -1962,6 +1976,13 @@
                             10
                           ]
                         },
+                        "googleId": {
+                          "type": "string",
+                          "description": "The unique identifier of the place in the Google Places API.",
+                          "examples": [
+                            "ChIJ9dfFtXYmVQ0RXL6FkWtY8lA"
+                          ]
+                        },
                         "name": {
                           "type": "string",
                           "examples": [
@@ -2479,6 +2500,13 @@
                             10
                           ]
                         },
+                        "googleId": {
+                          "type": "string",
+                          "description": "The unique identifier of the place in the Google Places API.",
+                          "examples": [
+                            "ChIJ9dfFtXYmVQ0RXL6FkWtY8lA"
+                          ]
+                        },
                         "name": {
                           "type": "string",
                           "examples": [
@@ -2897,6 +2925,13 @@
                         200000
                       ]
                     },
+                    "googleId": {
+                      "type": "string",
+                      "description": "The unique identifier of the place in the Google Places API.",
+                      "examples": [
+                        "ChIJ9dfFtXYmVQ0RXL6FkWtY8lA"
+                      ]
+                    },
                     "name": {
                       "type": "string",
                       "examples": [
@@ -3212,6 +3247,13 @@
                                     "format": "int64",
                                     "examples": [
                                       10
+                                    ]
+                                  },
+                                  "googleId": {
+                                    "type": "string",
+                                    "description": "The unique identifier of the place in the Google Places API.",
+                                    "examples": [
+                                      "ChIJ9dfFtXYmVQ0RXL6FkWtY8lA"
                                     ]
                                   },
                                   "name": {
@@ -3600,6 +3642,13 @@
                         200000
                       ]
                     },
+                    "googleId": {
+                      "type": "string",
+                      "description": "The unique identifier of the place in the Google Places API.",
+                      "examples": [
+                        "ChIJ9dfFtXYmVQ0RXL6FkWtY8lA"
+                      ]
+                    },
                     "name": {
                       "type": "string",
                       "examples": [
@@ -3915,6 +3964,13 @@
                                     "format": "int64",
                                     "examples": [
                                       10
+                                    ]
+                                  },
+                                  "googleId": {
+                                    "type": "string",
+                                    "description": "The unique identifier of the place in the Google Places API.",
+                                    "examples": [
+                                      "ChIJ9dfFtXYmVQ0RXL6FkWtY8lA"
                                     ]
                                   },
                                   "name": {
@@ -4519,6 +4575,13 @@
                                   10
                                 ]
                               },
+                              "googleId": {
+                                "type": "string",
+                                "description": "The unique identifier of the place in the Google Places API.",
+                                "examples": [
+                                  "ChIJ9dfFtXYmVQ0RXL6FkWtY8lA"
+                                ]
+                              },
                               "name": {
                                 "type": "string",
                                 "examples": [
@@ -5080,6 +5143,13 @@
                                 "format": "int64",
                                 "examples": [
                                   10
+                                ]
+                              },
+                              "googleId": {
+                                "type": "string",
+                                "description": "The unique identifier of the place in the Google Places API.",
+                                "examples": [
+                                  "ChIJ9dfFtXYmVQ0RXL6FkWtY8lA"
                                 ]
                               },
                               "name": {
@@ -6540,6 +6610,13 @@
                                       10
                                     ]
                                   },
+                                  "googleId": {
+                                    "type": "string",
+                                    "description": "The unique identifier of the place in the Google Places API.",
+                                    "examples": [
+                                      "ChIJ9dfFtXYmVQ0RXL6FkWtY8lA"
+                                    ]
+                                  },
                                   "name": {
                                     "type": "string",
                                     "examples": [
@@ -7110,6 +7187,13 @@
                                       10
                                     ]
                                   },
+                                  "googleId": {
+                                    "type": "string",
+                                    "description": "The unique identifier of the place in the Google Places API.",
+                                    "examples": [
+                                      "ChIJ9dfFtXYmVQ0RXL6FkWtY8lA"
+                                    ]
+                                  },
                                   "name": {
                                     "type": "string",
                                     "examples": [
@@ -7658,6 +7742,13 @@
                   10
                 ]
               },
+              "googleId": {
+                "type": "string",
+                "description": "The unique identifier of the place in the Google Places API.",
+                "examples": [
+                  "ChIJ9dfFtXYmVQ0RXL6FkWtY8lA"
+                ]
+              },
               "name": {
                 "type": "string",
                 "examples": [
@@ -8037,6 +8128,13 @@
               200000
             ]
           },
+          "googleId": {
+            "type": "string",
+            "description": "The unique identifier of the place in the Google Places API.",
+            "examples": [
+              "ChIJ9dfFtXYmVQ0RXL6FkWtY8lA"
+            ]
+          },
           "name": {
             "type": "string",
             "examples": [
@@ -8352,6 +8450,13 @@
                           "format": "int64",
                           "examples": [
                             10
+                          ]
+                        },
+                        "googleId": {
+                          "type": "string",
+                          "description": "The unique identifier of the place in the Google Places API.",
+                          "examples": [
+                            "ChIJ9dfFtXYmVQ0RXL6FkWtY8lA"
                           ]
                         },
                         "name": {
@@ -8915,6 +9020,13 @@
                       "format": "int64",
                       "examples": [
                         10
+                      ]
+                    },
+                    "googleId": {
+                      "type": "string",
+                      "description": "The unique identifier of the place in the Google Places API.",
+                      "examples": [
+                        "ChIJ9dfFtXYmVQ0RXL6FkWtY8lA"
                       ]
                     },
                     "name": {
