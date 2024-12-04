@@ -723,7 +723,19 @@
                                   "type": "boolean"
                                 },
                                 "commissionFix": {
-                                  "description": "The fixed commission in euros.",
+                                  "description": "Deprecated, use \"commissionPerTicket\" and \"commissionPerCart\" instead.",
+                                  "type": "number",
+                                  "examples": [
+                                    1
+                                  ]
+                                },
+                                "commissionPerTicket": {
+                                  "type": "number",
+                                  "examples": [
+                                    1
+                                  ]
+                                },
+                                "commissionPerCart": {
                                   "type": "number",
                                   "examples": [
                                     1
@@ -1475,7 +1487,19 @@
                                       "type": "boolean"
                                     },
                                     "commissionFix": {
-                                      "description": "The fixed commission in euros.",
+                                      "description": "Deprecated, use \"commissionPerTicket\" and \"commissionPerCart\" instead.",
+                                      "type": "number",
+                                      "examples": [
+                                        1
+                                      ]
+                                    },
+                                    "commissionPerTicket": {
+                                      "type": "number",
+                                      "examples": [
+                                        1
+                                      ]
+                                    },
+                                    "commissionPerCart": {
                                       "type": "number",
                                       "examples": [
                                         1
@@ -2138,7 +2162,19 @@
                             "type": "boolean"
                           },
                           "commissionFix": {
-                            "description": "The fixed commission in euros.",
+                            "description": "Deprecated, use \"commissionPerTicket\" and \"commissionPerCart\" instead.",
+                            "type": "number",
+                            "examples": [
+                              1
+                            ]
+                          },
+                          "commissionPerTicket": {
+                            "type": "number",
+                            "examples": [
+                              1
+                            ]
+                          },
+                          "commissionPerCart": {
                             "type": "number",
                             "examples": [
                               1
@@ -2662,7 +2698,19 @@
                             "type": "boolean"
                           },
                           "commissionFix": {
-                            "description": "The fixed commission in euros.",
+                            "description": "Deprecated, use \"commissionPerTicket\" and \"commissionPerCart\" instead.",
+                            "type": "number",
+                            "examples": [
+                              1
+                            ]
+                          },
+                          "commissionPerTicket": {
+                            "type": "number",
+                            "examples": [
+                              1
+                            ]
+                          },
+                          "commissionPerCart": {
                             "type": "number",
                             "examples": [
                               1
@@ -3411,7 +3459,19 @@
                                       "type": "boolean"
                                     },
                                     "commissionFix": {
-                                      "description": "The fixed commission in euros.",
+                                      "description": "Deprecated, use \"commissionPerTicket\" and \"commissionPerCart\" instead.",
+                                      "type": "number",
+                                      "examples": [
+                                        1
+                                      ]
+                                    },
+                                    "commissionPerTicket": {
+                                      "type": "number",
+                                      "examples": [
+                                        1
+                                      ]
+                                    },
+                                    "commissionPerCart": {
                                       "type": "number",
                                       "examples": [
                                         1
@@ -4128,7 +4188,19 @@
                                       "type": "boolean"
                                     },
                                     "commissionFix": {
-                                      "description": "The fixed commission in euros.",
+                                      "description": "Deprecated, use \"commissionPerTicket\" and \"commissionPerCart\" instead.",
+                                      "type": "number",
+                                      "examples": [
+                                        1
+                                      ]
+                                    },
+                                    "commissionPerTicket": {
+                                      "type": "number",
+                                      "examples": [
+                                        1
+                                      ]
+                                    },
+                                    "commissionPerCart": {
                                       "type": "number",
                                       "examples": [
                                         1
@@ -4737,7 +4809,19 @@
                                   "type": "boolean"
                                 },
                                 "commissionFix": {
-                                  "description": "The fixed commission in euros.",
+                                  "description": "Deprecated, use \"commissionPerTicket\" and \"commissionPerCart\" instead.",
+                                  "type": "number",
+                                  "examples": [
+                                    1
+                                  ]
+                                },
+                                "commissionPerTicket": {
+                                  "type": "number",
+                                  "examples": [
+                                    1
+                                  ]
+                                },
+                                "commissionPerCart": {
                                   "type": "number",
                                   "examples": [
                                     1
@@ -5307,7 +5391,19 @@
                                   "type": "boolean"
                                 },
                                 "commissionFix": {
-                                  "description": "The fixed commission in euros.",
+                                  "description": "Deprecated, use \"commissionPerTicket\" and \"commissionPerCart\" instead.",
+                                  "type": "number",
+                                  "examples": [
+                                    1
+                                  ]
+                                },
+                                "commissionPerTicket": {
+                                  "type": "number",
+                                  "examples": [
+                                    1
+                                  ]
+                                },
+                                "commissionPerCart": {
                                   "type": "number",
                                   "examples": [
                                     1
@@ -6772,7 +6868,19 @@
                                       "type": "boolean"
                                     },
                                     "commissionFix": {
-                                      "description": "The fixed commission in euros.",
+                                      "description": "Deprecated, use \"commissionPerTicket\" and \"commissionPerCart\" instead.",
+                                      "type": "number",
+                                      "examples": [
+                                        1
+                                      ]
+                                    },
+                                    "commissionPerTicket": {
+                                      "type": "number",
+                                      "examples": [
+                                        1
+                                      ]
+                                    },
+                                    "commissionPerCart": {
                                       "type": "number",
                                       "examples": [
                                         1
@@ -7349,7 +7457,19 @@
                                       "type": "boolean"
                                     },
                                     "commissionFix": {
-                                      "description": "The fixed commission in euros.",
+                                      "description": "Deprecated, use \"commissionPerTicket\" and \"commissionPerCart\" instead.",
+                                      "type": "number",
+                                      "examples": [
+                                        1
+                                      ]
+                                    },
+                                    "commissionPerTicket": {
+                                      "type": "number",
+                                      "examples": [
+                                        1
+                                      ]
+                                    },
+                                    "commissionPerCart": {
                                       "type": "number",
                                       "examples": [
                                         1
@@ -7904,7 +8024,19 @@
                   "type": "boolean"
                 },
                 "commissionFix": {
-                  "description": "The fixed commission in euros.",
+                  "description": "Deprecated, use \"commissionPerTicket\" and \"commissionPerCart\" instead.",
+                  "type": "number",
+                  "examples": [
+                    1
+                  ]
+                },
+                "commissionPerTicket": {
+                  "type": "number",
+                  "examples": [
+                    1
+                  ]
+                },
+                "commissionPerCart": {
                   "type": "number",
                   "examples": [
                     1
@@ -8614,7 +8746,19 @@
                             "type": "boolean"
                           },
                           "commissionFix": {
-                            "description": "The fixed commission in euros.",
+                            "description": "Deprecated, use \"commissionPerTicket\" and \"commissionPerCart\" instead.",
+                            "type": "number",
+                            "examples": [
+                              1
+                            ]
+                          },
+                          "commissionPerTicket": {
+                            "type": "number",
+                            "examples": [
+                              1
+                            ]
+                          },
+                          "commissionPerCart": {
                             "type": "number",
                             "examples": [
                               1
@@ -9184,7 +9328,19 @@
                         "type": "boolean"
                       },
                       "commissionFix": {
-                        "description": "The fixed commission in euros.",
+                        "description": "Deprecated, use \"commissionPerTicket\" and \"commissionPerCart\" instead.",
+                        "type": "number",
+                        "examples": [
+                          1
+                        ]
+                      },
+                      "commissionPerTicket": {
+                        "type": "number",
+                        "examples": [
+                          1
+                        ]
+                      },
+                      "commissionPerCart": {
                         "type": "number",
                         "examples": [
                           1
@@ -9889,7 +10045,19 @@
             "type": "boolean"
           },
           "commissionFix": {
-            "description": "The fixed commission in euros.",
+            "description": "Deprecated, use \"commissionPerTicket\" and \"commissionPerCart\" instead.",
+            "type": "number",
+            "examples": [
+              1
+            ]
+          },
+          "commissionPerTicket": {
+            "type": "number",
+            "examples": [
+              1
+            ]
+          },
+          "commissionPerCart": {
             "type": "number",
             "examples": [
               1
