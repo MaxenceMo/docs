@@ -47,7 +47,8 @@
       "pages": [
         "api-reference/introduction",
         "api-reference/authentication",
-        "api-reference/faq"
+        "api-reference/faq",
+        "api-reference/storage"
       ]
     }
   ],
