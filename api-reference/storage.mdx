@@ -1,6 +1,6 @@
 ---
 title: 'Create and maintain your database'
-description: 'This page explains how to use the `/get/catalogue` endpoint to create and maintain your own event database.'
+description: 'This page explains how to use the [get events catalogue](/api-reference/event-data-fetching-and-storage/get-events-catalogue) endpoint to create and maintain your own event database.'
 icon: "database"
 ---
 
@@ -8,7 +8,7 @@ icon: "database"
 
 <Steps>
   <Step title="Fetch all upcoming events">
-    Use the [Get events catalogue](/api-reference/event-data-fetching-and-storage/get-events-catalogue) endpoint without the `lastUpdatedAt` parameter to retrieve **all upcoming events**.
+    Use the [get events catalogue](/api-reference/event-data-fetching-and-storage/get-events-catalogue) endpoint without the `lastUpdatedAt` parameter to retrieve **all upcoming events**.
 
     You can't get all the events at once. To retrieve all events, make multiple requests by incrementing the `pageNumber` parameter until it exceeds the total number of pages indicated in `pagination.totalPages`.
   </Step>
@@ -50,4 +50,6 @@ icon: "database"
 <Note>Event availabilities are updates every 20 minutes.</Note>
 
 ## Best practices
+
+...
 
