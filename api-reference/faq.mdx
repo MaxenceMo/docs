@@ -7,4 +7,17 @@ icon: "circle-question"
   <Accordion title="How to have my credentials ?" icon="key">
   Contact us at contact@wander-app.fr
   </Accordion>
+  <Accordion title="How to find an event ?" icon="calendar-days">
+  You can use the [dynamic search](/api-reference/direct-event-data-serving/dynamic-search) endpoint specifying `reponseFilter`=`events`.
+  </Accordion>
+  <Accordion title="How to find an artist's events ?" icon="palette">
+  You can use the [search performer events](/api-reference/direct-event-data-serving/search-performer-events) endpoint.
+
+  It will return a not-null response only if at least one of the artist's events is or was present in our database.
+  </Accordion>
+  <Accordion title="How to find a place's events ?" icon="building">
+  You can use the [search place events](/api-reference/direct-event-data-serving/search-place-events) endpoint.
+
+  It will return a not-null response only if we have already had an event at that place in our database.
+  </Accordion>
 </AccordionGroup>

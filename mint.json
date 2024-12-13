@@ -48,7 +48,8 @@
         "api-reference/introduction",
         "api-reference/authentication",
         "api-reference/faq",
-        "api-reference/storage"
+        "api-reference/storage",
+        "api-reference/event-stream"
       ]
     }
   ],

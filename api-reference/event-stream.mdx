@@ -1,0 +1,35 @@
+---
+title: 'Create your event stream'
+description: 'This page explains how to use the [get events](/api-reference/direct-event-data-serving/get-events) endpoint to create an event stream or an event map.'
+icon: "mobile"
+---
+
+<Steps>
+  <Step title="Define your filters">
+  **Customize your event stream or map** by specifying the types of events you want to see.
+
+  For instance:
+  - **music** and **performance** events: `categories` = **['musique', 'spectacle']**
+  - events from **Shotgun** and **Dice**: `sources` = **['dice', 'shotgun']**
+  - events in paris:
+    - `locationFilter.circle.lat` = **48.864716**
+    - `locationFilter.circle.lng` = **2.349014**
+    - `locationFilter.circle.maxDistance` = **10000**
+  - events taking place next week:
+    - `datesFilter.minDate` = **2025-01-01T08:00:00.000Z**
+    - `datesFilter.maxDate` = **2025-01-07T23:00:00.000Z**
+  - free events:
+    - `pricesFilter.lowestPrice` = **0**
+    - `pricesFilter.highestPrice` = **0**
+  - ...
+  </Step>
+  <Step title="Use the results">
+  Use `data` to show events in your stream or map.
+
+  You can see the number of events corresponding to your filters in `pagination.totalItems`.
+  If you want to show more than the `limit` number of events, you can increment `pageNumber` as long as it is less than `totalPages`.
+
+  Information about the partners selling the event are available in `data.sources`.
+  <Tip>You can use the `data.sources.link` to redirect your users to the site of the partner selling the event and generate sales.</Tip>
+  </Step>
+</Steps>

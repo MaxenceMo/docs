@@ -35,7 +35,7 @@
           "Clients' login"
         ],
         "summary": "Login",
-        "description": "It generates a refreshToken valid for 7 days to relogin and an accessToken valid for 1 hour to use the next routes.",
+        "description": "It generates a refreshToken valid for 7 days to relogin and an accessToken valid for 1 hour to use the next endpoints.",
         "requestBody": {
           "required": true,
           "content": {
@@ -216,6 +216,7 @@
                                 ]
                               },
                               "maxDistance": {
+                                "description": "Distance in meters.",
                                 "type": "number",
                                 "examples": [
                                   500
@@ -1241,6 +1242,7 @@
                                 ]
                               },
                               "maxDistance": {
+                                "description": "Distance in meters.",
                                 "type": "number",
                                 "examples": [
                                   5000
@@ -6255,7 +6257,7 @@
           "Direct Event Data Serving"
         ],
         "summary": "Search place events",
-        "description": "Search for a particular place and events taking place there.",
+        "description": "Search for a place by name. A not-null result will only be returned if at least one event has already taken place at this place in our database.",
         "parameters": [
           {
             "name": "input",
@@ -9607,7 +9609,7 @@
           "Direct Event Data Serving"
         ],
         "summary": "Search performer events",
-        "description": "Search for a performer by name. A result is returned only if the performer's identity can be confidently confirmed.",
+        "description": "Search for a performer by name. A not-null result will only be returned if the performer's identity can be confidently confirmed and if at least one of their events is already recorded in our database.",
         "parameters": [
           {
             "name": "input",
