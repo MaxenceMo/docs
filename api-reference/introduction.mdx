@@ -14,15 +14,19 @@ In this mode, you retrieve event data on demand, without storing it. This is ide
 
 #### Available Endpoints:
 
-- **Get events**: Retrieve events based on filters (e.g., location, date, type). Perfect for populating a live event feed or map.
+- [Get events](/api-reference/direct-event-data-serving/get-events): Retrieve events based on filters (e.g., location, date, type). Perfect for populating a live event feed or map.
 
-- **Get event**: Fetch detailed data for a specific event, useful for creating individual event pages.
+- [Get event](/api-reference/direct-event-data-serving/get-event): Fetch detailed data for a specific event, useful for creating individual event pages.
 
-- **Get place**: Retrieve detailed information about a specific location, including events happening there, useful for creating dedicated place pages.
+- [Dynamic search](/api-reference/direct-event-data-serving/dynamic-search): Implement a search bar to find events, places, or performers.
 
-- **Get performer**: Fetch events related to a specific performer, useful for showing all events for an artist.
+- [Get place events](/api-reference/direct-event-data-serving/get-place-events): Fetch detailed information about a Google Place, including scheduled events.
 
-- **Search**: Implement a search bar to find events, places, or performers.
+- [Search place events](/api-reference/direct-event-data-serving/search-place-events): Search for events in a place by name.
+
+- [Get performer events](/api-reference/direct-event-data-serving/get-performer-events): Get performer’s whole informations and the events in which they take part.
+
+- [Search performer events](/api-reference/direct-event-data-serving/search-performer-events): Search for events by performer name.
 
 ### Event Data Fetching and Storage
 
@@ -30,5 +34,5 @@ This mode is suitable when you need to store event data for further use and keep
 
 #### Available Endpoint:
 
-- **Get events catalogue**: Retrieve all events and store them. You can also update existing data by specifying the date when the data was last fetched.
+- [Get events catalogue](/api-reference/event-data-fetching-and-storage/get-events-catalogue): Retrieve all events and store them. You can also update existing data by specifying the date when the data was last fetched.
 
