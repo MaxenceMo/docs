@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "Wander - API partners",
-    "description": "This API, developed by Wander, allows partner applications to access Wander's event data. Authentication, provided by the Wander team, is required to use this API. If you are interested in utilizing this API, please contact us at: support-api@wander-app.fr.\n\n**Last update: 2024-12-13**",
+    "description": "This API, developed by Wander, allows partner applications to access Wander's event data. Authentication, provided by the Wander team, is required to use this API. If you are interested in utilizing this API, please contact us at: support-api@wander-app.fr.\n\n**Last update: 2025-01-24**",
     "termsOfService": "https://wander-app.fr/api/terms-of-use",
     "contact": {
       "email": "support-api@wander-app.fr"
@@ -431,6 +431,13 @@
                             "examples": [
                               100000
                             ]
+                          },
+                          "wanderLink": {
+                            "type": "string",
+                            "examples": [
+                              "https://wander-app.fr/event/100000-plk-en-concert-accor-arena"
+                            ],
+                            "description": "Link to the event in the Wander app"
                           },
                           "name": {
                             "type": "string",
@@ -1364,6 +1371,13 @@
                                   100000
                                 ]
                               },
+                              "wanderLink": {
+                                "type": "string",
+                                "examples": [
+                                  "https://wander-app.fr/event/100000-plk-en-concert-accor-arena"
+                                ],
+                                "description": "Link to the event in the Wander app"
+                              },
                               "name": {
                                 "type": "string",
                                 "examples": [
@@ -2206,6 +2220,13 @@
                         100000
                       ]
                     },
+                    "wanderLink": {
+                      "type": "string",
+                      "examples": [
+                        "https://wander-app.fr/event/100000-plk-en-concert-accor-arena"
+                      ],
+                      "description": "Link to the event in the Wander app"
+                    },
                     "name": {
                       "type": "string",
                       "examples": [
@@ -2908,6 +2929,13 @@
                       "examples": [
                         100000
                       ]
+                    },
+                    "wanderLink": {
+                      "type": "string",
+                      "examples": [
+                        "https://wander-app.fr/event/100000-plk-en-concert-accor-arena"
+                      ],
+                      "description": "Link to the event in the Wander app"
                     },
                     "name": {
                       "type": "string",
@@ -4671,6 +4699,13 @@
                                   100000
                                 ]
                               },
+                              "wanderLink": {
+                                "type": "string",
+                                "examples": [
+                                  "https://wander-app.fr/event/100000-plk-en-concert-accor-arena"
+                                ],
+                                "description": "Link to the event in the Wander app"
+                              },
                               "name": {
                                 "type": "string",
                                 "examples": [
@@ -5544,6 +5579,13 @@
                                 "examples": [
                                   100000
                                 ]
+                              },
+                              "wanderLink": {
+                                "type": "string",
+                                "examples": [
+                                  "https://wander-app.fr/event/100000-plk-en-concert-accor-arena"
+                                ],
+                                "description": "Link to the event in the Wander app"
                               },
                               "name": {
                                 "type": "string",
@@ -6476,6 +6518,13 @@
                                       100000
                                     ]
                                   },
+                                  "wanderLink": {
+                                    "type": "string",
+                                    "examples": [
+                                      "https://wander-app.fr/event/100000-plk-en-concert-accor-arena"
+                                    ],
+                                    "description": "Link to the event in the Wander app"
+                                  },
                                   "name": {
                                     "type": "string",
                                     "examples": [
@@ -7357,6 +7406,13 @@
                                       100000
                                     ]
                                   },
+                                  "wanderLink": {
+                                    "type": "string",
+                                    "examples": [
+                                      "https://wander-app.fr/event/100000-plk-en-concert-accor-arena"
+                                    ],
+                                    "description": "Link to the event in the Wander app"
+                                  },
                                   "name": {
                                     "type": "string",
                                     "examples": [
@@ -8150,6 +8206,13 @@
                               100000
                             ]
                           },
+                          "wanderLink": {
+                            "type": "string",
+                            "examples": [
+                              "https://wander-app.fr/event/100000-plk-en-concert-accor-arena"
+                            ],
+                            "description": "Link to the event in the Wander app"
+                          },
                           "name": {
                             "type": "string",
                             "examples": [
@@ -8898,6 +8961,13 @@
                             "examples": [
                               100000
                             ]
+                          },
+                          "wanderLink": {
+                            "type": "string",
+                            "examples": [
+                              "https://wander-app.fr/event/100000-plk-en-concert-accor-arena"
+                            ],
+                            "description": "Link to the event in the Wander app"
                           },
                           "name": {
                             "type": "string",
@@ -9687,6 +9757,13 @@
                                   100000
                                 ]
                               },
+                              "wanderLink": {
+                                "type": "string",
+                                "examples": [
+                                  "https://wander-app.fr/event/100000-plk-en-concert-accor-arena"
+                                ],
+                                "description": "Link to the event in the Wander app"
+                              },
                               "name": {
                                 "type": "string",
                                 "examples": [
@@ -10443,6 +10520,13 @@
                                   100000
                                 ]
                               },
+                              "wanderLink": {
+                                "type": "string",
+                                "examples": [
+                                  "https://wander-app.fr/event/100000-plk-en-concert-accor-arena"
+                                ],
+                                "description": "Link to the event in the Wander app"
+                              },
                               "name": {
                                 "type": "string",
                                 "examples": [
@@ -11176,6 +11260,13 @@
             "examples": [
               100000
             ]
+          },
+          "wanderLink": {
+            "type": "string",
+            "examples": [
+              "https://wander-app.fr/event/100000-plk-en-concert-accor-arena"
+            ],
+            "description": "Link to the event in the Wander app"
           },
           "name": {
             "type": "string",
@@ -12066,6 +12157,13 @@
                         100000
                       ]
                     },
+                    "wanderLink": {
+                      "type": "string",
+                      "examples": [
+                        "https://wander-app.fr/event/100000-plk-en-concert-accor-arena"
+                      ],
+                      "description": "Link to the event in the Wander app"
+                    },
                     "name": {
                       "type": "string",
                       "examples": [
@@ -12938,6 +13036,13 @@
                         100000
                       ]
                     },
+                    "wanderLink": {
+                      "type": "string",
+                      "examples": [
+                        "https://wander-app.fr/event/100000-plk-en-concert-accor-arena"
+                      ],
+                      "description": "Link to the event in the Wander app"
+                    },
                     "name": {
                       "type": "string",
                       "examples": [
@@ -13686,6 +13791,13 @@
                   "examples": [
                     100000
                   ]
+                },
+                "wanderLink": {
+                  "type": "string",
+                  "examples": [
+                    "https://wander-app.fr/event/100000-plk-en-concert-accor-arena"
+                  ],
+                  "description": "Link to the event in the Wander app"
                 },
                 "name": {
                   "type": "string",
