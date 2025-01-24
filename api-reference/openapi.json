@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "Wander - API partners",
-    "description": "This API, developed by Wander, allows partner applications to access Wander's event data. Authentication, provided by the Wander team, is required to use this API. If you are interested in utilizing this API, please contact us at: support-api@wander-app.fr.\n\n**Last update: 2025-01-24**",
+    "description": "This API, developed by Wander, allows partner applications to access Wander's event data. Authentication, provided by the Wander team, is required to use this API. If you are interested in utilizing this API, please contact us at: support-api@wander-app.fr.\n\n**Last update: 2025-01-23**",
     "termsOfService": "https://wander-app.fr/api/terms-of-use",
     "contact": {
       "email": "support-api@wander-app.fr"
