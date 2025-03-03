@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "Wander - API partners",
-    "description": "This API, developed by Wander, allows partner applications to access Wander's event data. Authentication, provided by the Wander team, is required to use this API. If you are interested in utilizing this API, please contact us at: support-api@wander-app.fr.\n\n**Last update: 2025-01-23**",
+    "description": "This API, developed by Wander, allows partner applications to access Wander's event data. Authentication, provided by the Wander team, is required to use this API. If you are interested in utilizing this API, please contact us at: support-api@wander-app.fr.\n\n**Last update: 2025-03-03**",
     "termsOfService": "https://wander-app.fr/api/terms-of-use",
     "contact": {
       "email": "support-api@wander-app.fr"
@@ -25,6 +25,10 @@
     },
     {
       "name": "Event Data Fetching and Storage",
+      "description": "It requires a client's accessToken"
+    },
+    {
+      "name": "Client Data",
       "description": "It requires a client's accessToken"
     }
   ],
@@ -11235,6 +11239,174 @@
           }
         ]
       }
+    },
+    "/v2/clicks": {
+      "get": {
+        "tags": [
+          "Client Data"
+        ],
+        "summary": "Get clicks",
+        "parameters": [
+          {
+            "name": "lastClickedAt",
+            "description": "Retrieves only clicks that occurred after the specified date.",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 1000
+            }
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "minimum": 1
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "createdAt": {
+                            "type": "string",
+                            "examples": [
+                              "2024-09-12T12:00:06.138Z"
+                            ]
+                          },
+                          "link": {
+                            "type": "string",
+                            "descritpion": "The affiliate link"
+                          },
+                          "linkId": {
+                            "type": "number"
+                          },
+                          "eventId": {
+                            "type": "number"
+                          },
+                          "eventName": {
+                            "type": "string"
+                          },
+                          "source": {
+                            "type": "string",
+                            "examples": [
+                              "billetreduc"
+                            ]
+                          },
+                          "commission": {
+                            "type": "number",
+                            "examples": [
+                              0.3
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    "pagination": {
+                      "type": "object",
+                      "properties": {
+                        "totalItems": {
+                          "type": "number",
+                          "examples": [
+                            1000
+                          ]
+                        },
+                        "totalPages": {
+                          "type": "number",
+                          "examples": [
+                            20
+                          ]
+                        },
+                        "perPage": {
+                          "type": "number",
+                          "examples": [
+                            50
+                          ]
+                        },
+                        "currentPage": {
+                          "type": "number",
+                          "examples": [
+                            5
+                          ]
+                        },
+                        "nextPageParams": {
+                          "type": [
+                            "object",
+                            "null"
+                          ],
+                          "properties": {
+                            "pageNumber": {
+                              "type": "number",
+                              "examples": [
+                                6
+                              ]
+                            },
+                            "limit": {
+                              "type": "number",
+                              "examples": [
+                                50
+                              ]
+                            }
+                          }
+                        },
+                        "previousPageParams": {
+                          "type": [
+                            "object",
+                            "null"
+                          ],
+                          "properties": {
+                            "pageNumber": {
+                              "type": "number",
+                              "examples": [
+                                4
+                              ]
+                            },
+                            "limit": {
+                              "type": "number",
+                              "examples": [
+                                50
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid query schema"
+          },
+          "401": {
+            "description": "Access token is missing or invalid"
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
     }
   },
   "components": {
@@ -15087,6 +15259,42 @@
             "type": [
               "string",
               "null"
+            ]
+          }
+        }
+      },
+      "ClientClick": {
+        "type": "object",
+        "properties": {
+          "createdAt": {
+            "type": "string",
+            "examples": [
+              "2024-09-12T12:00:06.138Z"
+            ]
+          },
+          "link": {
+            "type": "string",
+            "descritpion": "The affiliate link"
+          },
+          "linkId": {
+            "type": "number"
+          },
+          "eventId": {
+            "type": "number"
+          },
+          "eventName": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string",
+            "examples": [
+              "billetreduc"
+            ]
+          },
+          "commission": {
+            "type": "number",
+            "examples": [
+              0.3
             ]
           }
         }
